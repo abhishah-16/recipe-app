@@ -1,0 +1,40 @@
+ul, li, a {
+    cursor: 'pointer'
+}
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+    font-weight: bold;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+    font-weight: bold;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.btn-primary.btn-outline:hover{
+    background-color: #428bca;
+    color:white;
+    font-weight: bold;
+}
+.btn-warning.btn-outline:hover{
+    background-color: #f0ad4e;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-danger.btn-outline:hover{
+    background-color: #d9534f;
+    color:white;
+    font-weight: bold;
+}

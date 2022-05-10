@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: 1px solid red
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+.shadow{
+    box-shadow:0px 0px 10px #cbced1;
+    padding: 20px 20px 20px 20px;
+}

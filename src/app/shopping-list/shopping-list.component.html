@@ -1,0 +1,21 @@
+<!-- <p>shopping-list works!</p> -->
+<div class="raw">
+    <div class="col-xs-10">
+        <p *ngIf="random2" [ngStyle]="{'color': 'red','margin-left':'100px','font-weight':'bold'}">{{random}}</p>
+        <app-shopping-edit></app-shopping-edit>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item" *ngFor="let inc of ingredients; let i = index" (click)="onEdititem(i)">
+                {{inc.name}} ({{inc.price}})
+            </a>
+
+        </ul>
+
+    </div>
+</div>
+<!--  [ngStyle]="{'box-shadow':'0px 0px 10px #cbced1'}" -->

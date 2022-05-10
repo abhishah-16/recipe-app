@@ -1,0 +1,23 @@
+a {
+    background:
+        linear-gradient(to right,
+            #337ab7,
+            lightgreen),
+        linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 20px #cbced1
+}
+
+a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+/* #337ab7 */

@@ -1,0 +1,37 @@
+.loader{
+  background: repeating-linear-gradient(to bottom,#fff 10px,#f5f5f5 20px);
+  height: 250px;
+  width: 250px;
+  margin: 30px auto 0;
+  border: 10px solid #3498db;
+  box-shadow: 0 0 5px #3498db inset;
+  border-radius: 50%;
+  position: relative;
+}
+.loader:before,
+.loader:after{
+  content: '';
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: translate(-50%);
+  transform-origin: bottom;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+.loader:before{
+  background-color: #eb3b5a;
+  width: 8px;
+  height: 31%;
+  animation: rotate 5s linear infinite;
+}
+.loader:after{
+  background-color: #2c3e50;
+  width: 6px;
+  height: 40%;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate{
+  from{ transform: rotate(0); }
+  to{ transform: rotate(360deg); }
+}

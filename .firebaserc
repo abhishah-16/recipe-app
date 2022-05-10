@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-recipe-book-8a67f": {
+      "hosting": {
+        "shopping-app": [
+          "ng-recipe-book-8a67f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-recipe-book-8a67f"
+  }
+}
