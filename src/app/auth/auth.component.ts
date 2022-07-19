@@ -13,7 +13,6 @@ export class AuthComponent implements OnInit {
   isloginMode = true
   isLoading = false
   error: string = ''
-
   constructor(private authservice: AuthService,
     private router: Router,
   ) { }
@@ -27,17 +26,16 @@ export class AuthComponent implements OnInit {
   }
 
   private showAlertError(message: string) {
-
   }
+
   onSwitchMode() {
     this.isloginMode = !this.isloginMode
   }
+
   onSubmit(form: NgForm) {
     const email = form.value.email
     const password = form.value.password
-
     let authObs: Observable<object>
-
     this.isLoading = true
     if (this.isloginMode) {
       authObs = this.authservice.logIn(email, password)

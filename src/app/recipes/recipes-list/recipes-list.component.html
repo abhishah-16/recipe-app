@@ -1,9 +1,8 @@
-<!-- <p>recipes-list works!</p> -->
 <div class="raw">
     <div class="col-xs-12">
         <button class="btn btn-success" (click)="onNewrecipe()"> New Recipe</button>
         <button class="btn btn-warning" [ngStyle]="{'margin-left':'15px'}" (click)="onFetchData()"> Fetch Data</button>
-        <button class="btn btn-primary" [ngStyle]="{'margin-left':'15px'}" (click)="onSaveData()"> Save Data</button> 
+        <button class="btn btn-primary" [ngStyle]="{'margin-left':'15px'}" (click)="onSaveData()"> Save Data</button>
     </div>
 </div>
 <hr>
@@ -11,7 +10,7 @@
 <hr>
 <div class="raw">
     <div class="col-xs-12">
-        <app-recipes-item  *ngFor="let recipeEl of recipes; let i = index" [recipe]="recipeEl" [index]="i">
+        <app-recipes-item *ngFor="let recipeEl of recipes; let i = index" [recipe]="recipeEl" [index]="i">
         </app-recipes-item>
     </div>
 </div>

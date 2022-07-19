@@ -14,11 +14,10 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.authservice.user.pipe(map(user => {
       const isAuth = !!user
-      if(isAuth){
+      if (isAuth) {
         return true
       }
       return this.router.createUrlTree(['auth'])
     }))
   }
-
 }

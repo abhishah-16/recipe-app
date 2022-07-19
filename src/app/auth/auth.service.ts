@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { BehaviorSubject, catchError, Subject, tap, throwError } from "rxjs";
+import { BehaviorSubject, catchError, tap, throwError } from "rxjs";
 import { User } from "./user.model";
 
 interface Authresponsedata {
@@ -22,7 +22,6 @@ export class AuthService {
         null
     )
     private tokentimer: any
-
     constructor(private http: HttpClient,
         private router: Router) { }
 
@@ -45,6 +44,7 @@ export class AuthService {
                 })
             )
     }
+
     logIn(email: string, password: string) {
         return this.http
             .post<Authresponsedata>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBInjfNk13KW6ZHkMiYlFzri8f4-l7NHb0',
@@ -64,6 +64,7 @@ export class AuthService {
                 })
             )
     }
+
     autoLogin() {
         const userdata: {
             email: string;
@@ -108,7 +109,6 @@ export class AuthService {
         userId: string,
         token: string,
         expdate: number) {
-        // console.log(resData)
         const expDate = new Date(new Date().getTime() + expdate * 1000)
         const user = new User(
             email,
@@ -121,9 +121,8 @@ export class AuthService {
     }
     private handleError(errRes: HttpErrorResponse) {
         let errmsg = 'An unknown error occured'
-        // console.log(errRes)
         if (!errRes.error || !errRes.error.error) {
-            return throwError(()=>{
+            return throwError(() => {
                 new Error(errmsg)
             })
         }
@@ -138,9 +137,9 @@ export class AuthService {
                 errmsg = 'Incorrect Password'
                 break;
         }
-        return throwError(()=>{
+        return throwError(() => {
             new Error(errmsg)
         })
     }
 }
-// AIzaSyBInjfNk13KW6ZHkMiYlFzri8f4-l7NHb0
+
