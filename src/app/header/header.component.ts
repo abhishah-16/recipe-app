@@ -16,10 +16,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private datastorage: DataStorageService,
     private authservice: AuthService) { }
 
-  useremail = ''
-  usersub2 = this.authservice.user.subscribe(user => {
-    this.useremail = user.email
-  })
+  
   ngOnInit() {
     this.usersub = this.authservice.user.subscribe(user => {
       this.isAuthenticated = !user ? false : true
@@ -39,6 +36,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.usersub.unsubscribe()
-    this.usersub2.unsubscribe()
+    
   }
 }

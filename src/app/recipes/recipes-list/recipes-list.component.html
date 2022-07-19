@@ -11,7 +11,6 @@
 <hr>
 <div class="raw">
     <div class="col-xs-12">
-        <!-- <img *ngIf="imgloader" style="margin-top:50px" src="https://content.presentermedia.com/content/animsp/00016000/16208/chef_cooking_with_pan_300_wht.gif" alt=""> -->
         <app-recipes-item  *ngFor="let recipeEl of recipes; let i = index" [recipe]="recipeEl" [index]="i">
         </app-recipes-item>
     </div>

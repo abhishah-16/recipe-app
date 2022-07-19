@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from 'express';
+
 import { Ingredients } from '../shared/ingredients.model';
 import { ShoppingListService } from './shopping-list.service';
 
@@ -13,7 +13,7 @@ export class ShoppingListComponent implements OnInit {
   random2 = false
   ingredients: Ingredients[]
   constructor(private shoppinglistservice: ShoppingListService,
-      private router: Router) { }
+     ) { }
 
   ngOnInit() {
     this.ingredients = this.shoppinglistservice.getIngredient()

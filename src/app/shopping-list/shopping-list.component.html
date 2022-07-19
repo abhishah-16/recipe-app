@@ -6,14 +6,13 @@
         <hr>
         <hr>
         <hr>
-        <hr>
-        <hr>
-        <hr>
+        <br>
+        <br>
+        <br>
         <ul class="list-group">
-            <a class="list-group-item" *ngFor="let inc of ingredients; let i = index" (click)="onEdititem(i)">
+            <a class="list-group-item" *ngFor="let inc of ingredients; let i = index" (click)="onEdititem(i)" style="margin:0px 400px 0px 30px;">
                 {{inc.name}} ({{inc.price}})
             </a>
-
         </ul>
 
     </div>

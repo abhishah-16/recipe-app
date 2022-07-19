@@ -12,7 +12,7 @@ import { AuthService } from './auth.service';
 export class AuthComponent implements OnInit {
   isloginMode = true
   isLoading = false
-  error: string = null
+  error: string = ''
 
   constructor(private authservice: AuthService,
     private router: Router,
@@ -50,7 +50,7 @@ export class AuthComponent implements OnInit {
       this.router.navigate(['recipes'])
     }, error => {
       this.error = error
-      // console.log(error)
+      console.log(error)
       this.isLoading = false
       this.showAlertError(error)
     })
