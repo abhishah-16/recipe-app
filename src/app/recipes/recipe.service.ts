@@ -23,37 +23,37 @@ export class RecipeService {
   // ];
   public recipes: Recipe[] = []
   public n: number = this.recipes.length
+  constructor(private slservice: ShoppingListService) { }
 
-  constructor(private slservice: ShoppingListService) {
-
-  }
-  fetching = false
   getRecipe() {
     return this.recipes
   }
+
   getrecipe(index: number) {
     return this.recipes[index]
   }
+
   addinctoslList(ingredient: Ingredients[]) {
     this.slservice.addingredients(ingredient)
   }
+
   addRecipe(recipe: Recipe) {
     this.recipes.push(recipe)
   }
+
   updateRecipe(index: number, newrecipe: Recipe) {
     this.recipes[index] = newrecipe
   }
+
   deleteRecipe(index: number) {
     this.recipes.splice(index, 1)
   }
+
   setRecipes(recipes: Recipe[]) {
-    // this.recipes = recipess;
     let n = recipes.length
     console.log(n)
     for (let i = 0; i < n; i++) {
       this.recipes[i] = recipes[i]
-      
     }
-
   }
 }

@@ -1,5 +1,4 @@
-
-import { Component, ElementRef, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Ingredients } from 'src/app/shared/ingredients.model';
@@ -30,6 +29,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
         })
       })
   }
+
   onAdditem(form: NgForm) {
     const value = form.value
     const newinc = new Ingredients(value.name, value.amount)
@@ -40,18 +40,19 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     }
     this.editMode = false
     form.reset()
-
   }
+
   onClear() {
     this.sleditform.reset()
     this.editMode = false
   }
+
   onDelete() {
     this.onClear()
     this.slservice.deleteingredient(this.editeditemindex)
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
   }
-
 }

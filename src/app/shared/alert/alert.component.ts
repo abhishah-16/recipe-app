@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-alert',
@@ -7,16 +6,15 @@ import { Router, Routes } from '@angular/router';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     console.log('alert')
   }
-  @Input () message: string
+  
+  @Input() message: string
   @Output() closerrr = new EventEmitter<void>()
-
-  onClose(){
+  onClose() {
     this.closerrr.emit()
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Ingredients } from '../shared/ingredients.model';
 import { ShoppingListService } from './shopping-list.service';
 
@@ -13,12 +12,12 @@ export class ShoppingListComponent implements OnInit {
   random2 = false
   ingredients: Ingredients[]
   constructor(private shoppinglistservice: ShoppingListService,
-     ) { }
+  ) { }
 
   ngOnInit() {
     this.ingredients = this.shoppinglistservice.getIngredient()
-    
   }
+
   onEdititem(index: number) {
     this.shoppinglistservice.editingredient.next(index)
   }

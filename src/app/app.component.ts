@@ -7,10 +7,11 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private authservice: AuthService){}
+  constructor(private authservice: AuthService) { }
   ngOnInit(): void {
     this.authservice.autoLogin()
   }
+
   loadedfeature = 'recipe'
   onNavigate(feature: string) {
     this.loadedfeature = feature;

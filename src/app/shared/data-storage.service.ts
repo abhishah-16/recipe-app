@@ -18,7 +18,6 @@ export class DataStorageService {
         this.http
             .put('https://ng-recipe-book-8a67f-default-rtdb.firebaseio.com/recipes.json', recipes)
             .subscribe(response => {
-                // console.log(response)
             })
     }
 
@@ -26,8 +25,8 @@ export class DataStorageService {
         return this.authservice.user.pipe(
             take(1),
             exhaustMap(user => this.http
-                .get<Recipe[]>('https://ng-recipe-book-8a67f-default-rtdb.firebaseio.com/recipes.json',{
-                    params: new HttpParams().set('auth',user.token)
+                .get<Recipe[]>('https://ng-recipe-book-8a67f-default-rtdb.firebaseio.com/recipes.json', {
+                    params: new HttpParams().set('auth', user.token)
                 })),
             map(recipes => {
                 return recipes.map(recipe => {
@@ -42,5 +41,3 @@ export class DataStorageService {
             }))
     }
 }
-
-// AIzaSyBInjfNk13KW6ZHkMiYlFzri8f4-l7NHb0
