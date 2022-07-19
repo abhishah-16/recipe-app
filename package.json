@@ -1,4 +1,5 @@
 {
+  "resolver": "webpack",
   "name": "shopping-app",
   "version": "0.0.0",
   "scripts": {
@@ -29,6 +30,7 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.72.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -52,5 +54,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishah-16/recipe-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishah-16/recipe-app/issues"
+  },
+  "homepage": "https://github.com/abhishah-16/recipe-app#readme"
 }

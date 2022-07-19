@@ -47,17 +47,13 @@ export class RecipeService {
     this.recipes.splice(index, 1)
   }
   setRecipes(recipes: Recipe[]) {
-    // this.recipes = recipes;
-    for (let i = 0; i < 20; i++) {
+    // this.recipes = recipess;
+    let n = recipes.length
+    console.log(n)
+    for (let i = 0; i < n; i++) {
       this.recipes[i] = recipes[i]
-      if (!recipes[i + 1].name) {
-        return
-      }
+      
     }
-    // const data = JSON.stringify(recipes)
-    // this.recipes = JSON.parse(data)
-    console.log(recipes[2])
-    console.log(this.recipes[2])
-    console.log('hello')
+
   }
 }

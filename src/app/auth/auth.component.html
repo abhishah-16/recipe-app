@@ -4,7 +4,7 @@
         <app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>
         <div *ngIf="isLoading">
             <app-loading-spinner></app-loading-spinner>
-            <!-- <img src="https://content.presentermedia.com/content/animsp/00016000/16208/chef_cooking_with_pan_300_wht.gif" class="loader" alt=""/> -->
+            
         </div>
         <form #form="ngForm" (ngSubmit)="onSubmit(form)" *ngIf="!isLoading" >
             <div class="form-group">

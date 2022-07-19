@@ -9,30 +9,25 @@ import { RecipeService } from '../recipe.service';
   templateUrl: './recipes-list.component.html',
   styleUrls: ['./recipes-list.component.css']
 })
-export class RecipesListComponent implements OnInit, OnDestroy {
+export class RecipesListComponent implements OnInit {
 
   recipes: Recipe[]
-  // imgloader = true
+ 
   constructor(private recipeservice: RecipeService,
     private router: Router,
     private route: ActivatedRoute,
     private datastorage: DataStorageService) { }
 
-  ngOnDestroy(): void {
-    // this.imgloader = false
-    console.log('destroy')
-  }
-
+  
   ngOnInit() {
     this.recipes = this.recipeservice.getRecipe()
-    // this.imgloader = true
     
   }
   onNewrecipe() {
     this.router.navigate(['new'], { relativeTo: this.route })
   }
   onFetchData() {
-    // this.imgloader = false
+    
     this.datastorage.fetchRecipes().subscribe(recipes => {
       console.log(recipes)
     })

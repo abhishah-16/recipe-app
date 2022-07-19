@@ -1,7 +1,6 @@
 <nav class='navbar navbar-default'>
     <div class="container-fluid">
-        <div class="navbar-header">
-            
+        <div class="navbar-header">           
             <a class="navbar-brand"> Recipe Book
             </a>
         </div>
@@ -13,7 +12,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li *ngIf="isAuthenticated">
-                    <a>{{useremail}}</a>
+                   
                 </li>
                 <li *ngIf="isAuthenticated">
                     <a style="cursor:pointer" (click)="onLogout()">Logout</a>
