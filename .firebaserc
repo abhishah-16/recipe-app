@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "recipe-book-22c76",
+    "recipe": "recipe-book-22c76"
+  },
   "targets": {
     "ng-recipe-book-8a67f": {
       "hosting": {
@@ -8,7 +12,5 @@
       }
     }
   },
-  "projects": {
-    "default": "ng-recipe-book-8a67f"
-  }
+  "etags": {}
 }
